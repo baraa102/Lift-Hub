@@ -1,0 +1,41 @@
+<section class="card">
+  <h2 style="margin:0 0 8px">Login / Register</h2>
+  <p class="muted" style="margin:0 0 14px">Local demo. Default role is student.</p>
+
+  <div class="row">
+    <div class="card soft">
+      <h3 style="margin:0 0 10px">Login</h3>
+      <div class="row">
+        <input class="input" id="loginUserOrEmail" placeholder="Username or Email" />
+        <input class="input" id="loginPass" placeholder="Password" type="password" />
+      </div>
+      <button class="btn primary" id="loginBtn" style="margin-top:10px">Login</button>
+      <p class="muted" id="loginMsg" style="margin:10px 0 0"></p>
+    </div>
+
+    <div class="card soft">
+      <h3 style="margin:0 0 10px">Register</h3>
+      <div class="row">
+        <input class="input" id="regUsername" placeholder="Username (3–16, letters/numbers/_)" />
+        <input class="input" id="regEmail" placeholder="Email" />
+      </div>
+      <div class="row" style="margin-top:10px">
+        <input class="input" id="regName" placeholder="Full name" />
+        <input class="input" id="regDisplayName" placeholder="Display name" />
+      </div>
+      <div class="row" style="margin-top:10px">
+        <input class="input" id="regPass" placeholder="Password (Min 10 + Upper/Lower/Number/Symbol)" type="password" />
+        <div class="card soft" style="padding:10px;box-shadow:none">
+          <div class="muted" style="font-size:12px">Display name يظهر في Welcome + Chat</div>
+        </div>
+      </div>
+      <button class="btn primary" id="registerBtn" style="margin-top:10px">Create account</button>
+      <p class="muted" id="regMsg" style="margin:10px 0 0"></p>
+    </div>
+  </div>
+
+  <div class="card soft" style="margin-top:14px">
+    <h3 style="margin:0 0 8px">Admin default</h3>
+    <p class="muted" style="margin:0">username: <b>admin</b> — password: <b>Admin@12345!</b></p>
+  </div>
+</section>

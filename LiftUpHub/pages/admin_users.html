@@ -1,0 +1,33 @@
+<section class="card">
+  <h2 style="margin:0 0 8px">Users Management</h2>
+  <p class="muted" style="margin:0 0 12px">
+    Edit roles & reset passwords (password is never shown).
+  </p>
+
+  <div class="row">
+    <input class="input" id="auSearch" placeholder="Search username / email / display name" />
+    <select class="input" id="auRoleFilter">
+      <option value="all">All roles</option>
+      <option value="student">student</option>
+      <option value="teacher">teacher</option>
+      <option value="admin">admin</option>
+    </select>
+  </div>
+
+  <div class="card soft" style="margin-top:12px">
+    <div id="auTable"></div>
+    <p class="muted" id="auMsg" style="margin:10px 0 0"></p>
+  </div>
+
+  <div class="card soft" style="margin-top:12px">
+    <h3 style="margin:0 0 6px">Password reset rule</h3>
+    <p class="muted" style="margin:0">
+      Admin sets a temporary password. User must change it after login (force reset).
+    </p>
+  </div>
+</section>
+
+<script type="module">
+  import { mountAdminUsers } from "../assets/js/admin_users.js";
+  mountAdminUsers();
+</script>
