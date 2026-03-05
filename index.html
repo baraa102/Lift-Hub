@@ -25,5 +25,31 @@
 
   <script src="./assets/js/gallery_static.js"></script>
   <script src="./assets/js/app.js"></script>
+  <script>
+  // Show fatal errors on screen (GitHub blank page fix)
+  setTimeout(() => {
+    const app = document.getElementById("app");
+    const hasUI = app && app.innerText.trim().length > 0;
+
+    const errs = (window.__BOOT_LOG__ || []);
+    if (!hasUI || errs.length) {
+      const box = document.createElement("div");
+      box.style.cssText = `
+        position:fixed;inset:12px;z-index:99999;
+        background:rgba(0,0,0,.75);color:#fff;
+        border:1px solid rgba(255,255,255,.18);
+        border-radius:14px;padding:14px;
+        font:14px/1.5 system-ui;overflow:auto`;
+      box.innerHTML = `
+        <b>LiftUpHub Boot Error</b><br><br>
+        افتح DevTools > Console/Network لو محتاج تفاصيل.<br><br>
+        <b>Captured:</b><br>
+        <pre style="white-space:pre-wrap;margin:8px 0 0">${
+          (errs.join("\n") || "No captured errors. Check Network for 404.")
+        }</pre>`;
+      document.body.appendChild(box);
+    }
+  }, 1200);
+</script>
 </body>
 </html>
