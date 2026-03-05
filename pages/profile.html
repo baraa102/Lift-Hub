@@ -1,0 +1,28 @@
+<section class="card">
+  <h2 style="margin:0 0 8px">My Profile</h2>
+  <p class="muted" style="margin:0 0 12px">Update your info (username/role are locked).</p>
+
+  <div class="card soft">
+    <h3 style="margin:0 0 8px">Account info</h3>
+    <div class="row">
+      <input class="input" id="pName" placeholder="Full name" />
+      <input class="input" id="pDisplayName" placeholder="Display name" />
+    </div>
+    <div class="row" style="margin-top:10px">
+      <input class="input" id="pEmail" placeholder="Email" />
+      <input class="input" id="pUsername" placeholder="Username (locked)" disabled />
+    </div>
+    <button class="btn primary" id="saveProfile" style="margin-top:10px">Save profile</button>
+    <p class="muted" id="pMsg" style="margin:10px 0 0"></p>
+  </div>
+
+  <div class="card soft" style="margin-top:12px">
+    <h3 style="margin:0 0 8px">Change password</h3>
+    <div class="row">
+      <input class="input" id="pCurPass" placeholder="Current password" type="password" />
+      <input class="input" id="pNewPass" placeholder="New password" type="password" />
+    </div>
+    <button class="btn" id="changePass" style="margin-top:10px">Update password</button>
+    <p class="muted" id="pPassMsg" style="margin:10px 0 0"></p>
+  </div>
+</section>

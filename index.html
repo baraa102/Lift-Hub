@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Lift Up Hub</title>
+  <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body data-theme="dark">
+  <canvas id="particles" class="bgParticles"></canvas>
+  <div id="app"></div>
+
+  <!-- Boot loader that shows errors on screen -->
+  <script>
+    window.__BOOT_LOG__ = [];
+    window.onerror = function(msg, src, line, col, err){
+      window.__BOOT_LOG__.push(String(msg));
+      console.error(err || msg);
+    };
+    window.onunhandledrejection = function(e){
+      window.__BOOT_LOG__.push(String(e.reason?.message || e.reason));
+      console.error(e.reason);
+    };
+  </script>
+
+  <script src="./assets/js/gallery_static.js"></script>
+  <script src="./assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<section class="authShell">
+  <div class="card authCard">
+    <div class="authHead">
+      <div>
+        <h2 style="margin:0 0 4px">Login / Register</h2>
+        <div class="muted" style="font-size:13px">Local demo • Default role is <b>student</b></div>
+      </div>
+
+      <div class="authTabs" role="tablist" aria-label="Auth tabs">
+        <button class="btn" id="authTabLogin" type="button">Login</button>
+        <button class="btn" id="authTabRegister" type="button">Register</button>
+      </div>
+    </div>
+
+    <div class="authBody">
+      <div class="card soft" id="panelLogin">
+        <h3 style="margin:0 0 10px">Login</h3>
+        <div class="stack">
+          <input class="input" id="loginUserOrEmail" placeholder="Username or Email" />
+          <input class="input" id="loginPass" placeholder="Password" type="password" />
+        </div>
+        <button class="btn primary" id="loginBtn" style="margin-top:10px">Login</button>
+        <p class="muted" id="loginMsg" style="margin:10px 0 0"></p>
+      </div>
+
+      <div class="card soft hide" id="panelRegister">
+        <h3 style="margin:0 0 10px">Register</h3>
+        <div class="stack">
+          <input class="input" id="regUsername" placeholder="Username (3–16, letters/numbers/_)" />
+          <input class="input" id="regEmail" placeholder="Email" />
+          <input class="input" id="regName" placeholder="Full name" />
+          <input class="input" id="regDisplayName" placeholder="Display name" />
+          <input class="input" id="regPass" placeholder="Password (Min 10 + Upper/Lower/Number/Symbol)" type="password" />
+        </div>
+
+        <div class="card soft" style="margin-top:10px;padding:10px;box-shadow:none">
+          <div class="muted" style="font-size:12px">Display name يظهر في Welcome + Chat</div>
+        </div>
+
+        <button class="btn primary" id="registerBtn" style="margin-top:10px">Create account</button>
+        <p class="muted" id="regMsg" style="margin:10px 0 0"></p>
+      </div>
+    </div>
+
+    <div class="card soft" style="margin-top:12px">
+      <div style="font-weight:900;margin-bottom:6px">Admin default</div>
+      <div class="muted" style="font-size:13px">
+        username: <b>admin</b> — password: <b>Admin@12345!</b>
+      </div>
+    </div>
+  </div>
+</section>
