@@ -1,0 +1,63 @@
+<header class="topbar">
+  <div class="brandRow">
+    <div class="logoDot"></div>
+    <h1 id="appTitle">Lift Up Hub</h1>
+  </div>
+
+  <div class="actions">
+    <span class="tagRole" id="roleTag">Role: guest</span>
+    <span class="tagRole hide" id="welcomeTag">Welcome</span>
+
+    <div class="pill"><a class="toggle" href="#/home" id="navHome">🏠 Home</a></div>
+
+    <div class="pill"><button class="toggle" id="themeToggle">🌙 Dark</button></div>
+
+    <div class="pill"><button class="toggle" data-open="drawerGuides">📚 Guides</button></div>
+    <div class="pill"><button class="toggle" data-open="drawerChat">💬 Chat</button></div>
+
+    <div class="pill hide" id="profilePill"><a class="toggle" href="#/profile" id="navProfile">👤 Profile</a></div>
+
+    <div class="pill"><a class="toggle" href="#/admin_settings" id="navAdmin">🛡️ Admin</a></div>
+
+    <div class="pill" id="loginPill"><a class="toggle" href="#/auth" id="navAuth">🔐 Login</a></div>
+    <div class="pill hide" id="logoutPill"><button class="toggle" id="logoutBtn">🚪 Logout</button></div>
+  </div>
+</header>
+
+<!-- Study Guides Drawer -->
+<aside class="drawer left" id="drawerGuides" aria-hidden="true">
+  <div class="resizeHandle resizeHandle-left" data-resize="drawerGuides" title="Drag to resize"></div>
+
+  <div class="drawerHeader">
+    <div class="drawerTitle">
+      <strong>Study Guides</strong><small>Quick resources</small>
+    </div>
+
+    <div style="display:flex;gap:8px;align-items:center">
+      <button class="iconBtn pinBtn" data-pin="drawerGuides" aria-label="Pin" title="Pin">📌</button>
+      <button class="iconBtn" data-reset="drawerGuides" aria-label="Reset width" title="Reset width">↔</button>
+    </div>
+  </div>
+
+  <div class="drawerBody" id="guidesMount"></div>
+</aside>
+
+<!-- Student Chat Drawer -->
+<aside class="drawer right" id="drawerChat" aria-hidden="true">
+  <div class="resizeHandle resizeHandle-right" data-resize="drawerChat" title="Drag to resize"></div>
+
+  <div class="drawerHeader">
+    <div class="drawerTitle">
+      <strong>Student Chat</strong><small>Local demo (no backend)</small>
+    </div>
+
+    <div style="display:flex;gap:8px;align-items:center">
+      <button class="iconBtn pinBtn" data-pin="drawerChat" aria-label="Pin" title="Pin">📌</button>
+      <button class="iconBtn" data-reset="drawerChat" aria-label="Reset width" title="Reset width">↔</button>
+    </div>
+  </div>
+
+  <div class="drawerBody" id="chatMount"></div>
+</aside>
+
+<main id="pageMount"></main>

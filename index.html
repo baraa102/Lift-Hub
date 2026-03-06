@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Lift Up Hub</title>
+  <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body data-theme="dark">
+  <canvas id="particles" class="bgParticles"></canvas>
+  <div id="app"></div>
+
+  <!-- Boot loader that shows errors on screen -->
+  <script>
+    window.__BOOT_LOG__ = [];
+    window.onerror = function(msg, src, line, col, err){
+      window.__BOOT_LOG__.push(String(msg));
+      console.error(err || msg);
+    };
+    window.onunhandledrejection = function(e){
+      window.__BOOT_LOG__.push(String(e.reason?.message || e.reason));
+      console.error(e.reason);
+    };
+  </script>
+
+  <!-- Option 2: Static gallery list (works on GitHub Pages for everyone) -->
+  <script src="./assets/js/gallery_static.js"></script>
+  <script src="./assets/js/app.js"></script>
+
+  <!-- Optional: show captured errors if app didn't render -->
+  <script>
+    setTimeout(() => {
+      const app = document.getElementById('app');
+      const hasUI = app && app.innerText.trim().length > 0;
+      const errs = (window.__BOOT_LOG__ || []);
+      if (!hasUI || errs.length) {
+        const box = document.createElement('div');
+        box.style.cssText = 'position:fixed;inset:12px;z-index:99999;background:rgba(0,0,0,.75);color:#fff;border:1px solid rgba(255,255,255,.18);border-radius:14px;padding:14px;font:14px/1.5 system-ui;overflow:auto';
+        box.innerHTML = '<b>LiftUpHub Boot Error</b><br><br><pre style="white-space:pre-wrap;margin:8px 0 0">' + (errs.join('\n') || 'No captured errors. Check Network tab for 404.') + '</pre>';
+        document.body.appendChild(box);
+      }
+    }, 1400);
+  </script>
+</body>
+</html>
